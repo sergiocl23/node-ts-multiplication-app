@@ -30,7 +30,7 @@ describe('Server App', () => {
     expect( typeof ServerApp.run ).toBe('function');
 
   });
-/*
+
   test('should run ServerApp with options', () => {
 
     const logSpy = jest.spyOn(console, 'log');
@@ -56,7 +56,6 @@ describe('Server App', () => {
     });
 
   });
-  */
 
   test('should run with custom values mocked', () => {
     
@@ -82,7 +81,7 @@ describe('Server App', () => {
       fileName: options.fileName,
     });
     expect( logMock ).toHaveBeenCalledWith('File created!');
-    expect( logErrorMock ).not.toBeCalledWith();
+    expect( logErrorMock ).not.toHaveBeenCalled();
 
 
   });
